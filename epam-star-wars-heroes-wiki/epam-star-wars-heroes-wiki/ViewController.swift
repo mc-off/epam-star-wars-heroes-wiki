@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         let deffaultHero: Hero = Hero(name: "Baba Vova", planet: "Sormovo")
         
         for i in 0...20 {
-            heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i)))
+            heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i),sex: getRandomSex()))
         }
     
         registerTableViewCells()

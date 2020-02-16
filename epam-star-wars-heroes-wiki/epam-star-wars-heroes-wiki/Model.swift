@@ -8,7 +8,45 @@
 
 import Foundation
 
+enum HeroParameters: String{
+    case name = "Name"
+    case planet = "Planet"
+    case sex = "Sex"
+}
+
+enum HeroSex: String{
+    case undefined = ""
+    case male = "Male"
+    case female = "Female"
+}
+
+func getRandomSex() -> HeroSex {
+    switch Int.random(in: 0 ... 2){
+        case 0: return .female
+        case 1: return .male
+    default:
+        return .undefined
+    }
+}
+
 struct Hero {
     var name: String = ""
     var planet: String = ""
-}
+    var sex:HeroSex = .undefined
+    
+    func getHeroVocabulary(withtDeffault:Bool) -> [HeroParameters: String] {
+            var heroVocabulary = [HeroParameters: String]()
+            if (withtDeffault){
+                if (!self.name.isEmpty){
+                    heroVocabulary.updateValue(self.name, forKey: .name)
+                }
+                if (!self.planet.isEmpty){
+                    heroVocabulary.updateValue(self.planet, forKey: .planet)
+                }
+            }
+            if (!self.sex.rawValue.isEmpty){
+                heroVocabulary.updateValue(self.sex.rawValue, forKey: .sex)
+            }
+            return heroVocabulary
+        }
+    }
