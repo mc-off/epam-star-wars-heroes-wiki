@@ -9,7 +9,6 @@
 import Foundation
 
 struct Hero {
-    var name: String
-    var surname: String
-    var planet: String
+    var name: String = ""
+    var planet: String = ""
 }

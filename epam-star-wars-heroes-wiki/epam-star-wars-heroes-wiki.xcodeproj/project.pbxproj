@@ -10,6 +10,7 @@
 		6D57981D23F87B7E00107829 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */; };
 		6D57981E23F87B7E00107829 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */; };
 		6D57982023F87F8500107829 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57981F23F87F8500107829 /* Model.swift */; };
+		6D57982223F934F600107829 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57982123F934F600107829 /* HeroViewController.swift */; };
 		6D9788A223F8090000514AAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A123F8090000514AAF /* AppDelegate.swift */; };
 		6D9788A423F8090000514AAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A323F8090000514AAF /* SceneDelegate.swift */; };
 		6D9788A623F8090000514AAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A523F8090000514AAF /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		6D57981F23F87F8500107829 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6D57982123F934F600107829 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
 		6D97889E23F8090000514AAF /* epam-star-wars-heroes-wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epam-star-wars-heroes-wiki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D9788A123F8090000514AAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D9788A323F8090000514AAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				6D9788A523F8090000514AAF /* ViewController.swift */,
 				6D57981F23F87F8500107829 /* Model.swift */,
 				6D9788A723F8090000514AAF /* Main.storyboard */,
+				6D57982123F934F600107829 /* HeroViewController.swift */,
 				6D9788AA23F8090100514AAF /* Assets.xcassets */,
 				6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */,
 				6D9788AF23F8090100514AAF /* Info.plist */,
@@ -152,6 +155,7 @@
 				6D9788A223F8090000514AAF /* AppDelegate.swift in Sources */,
 				6D57982023F87F8500107829 /* Model.swift in Sources */,
 				6D9788A423F8090000514AAF /* SceneDelegate.swift in Sources */,
+				6D57982223F934F600107829 /* HeroViewController.swift in Sources */,
 				6D57981D23F87B7E00107829 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

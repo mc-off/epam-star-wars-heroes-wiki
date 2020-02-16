@@ -42,9 +42,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="7Tz-wx-btf" kind="show" id="Kjn-bd-Xa5"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -75,6 +72,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="y0J-a3-eUp"/>
                     <connections>
+                        <outlet property="navItem" destination="y0J-a3-eUp" id="zFD-vR-gD4"/>
+                        <outlet property="searchBar" destination="tTT-OY-CIy" id="cXQ-OF-TGA"/>
                         <outlet property="tableView" destination="rup-Ck-iMQ" id="K7G-9K-WMF"/>
                     </connections>
                 </viewController>
@@ -98,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="-978" y="127"/>
         </scene>
-        <!--View Controller-->
+        <!--Hero View Controller-->
         <scene sceneID="mIx-6A-Dlo">
             <objects>
-                <viewController id="7Tz-wx-btf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="heroVC" id="7Tz-wx-btf" customClass="HeroViewController" customModule="epam_star_wars_heroes_wiki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xl7-FF-Udt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +153,11 @@
                         <viewLayoutGuide key="safeArea" id="VbU-5C-vUL"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jcn-mb-ZxZ"/>
+                    <connections>
+                        <outlet property="informationTableView" destination="b6p-Fq-VEr" id="4wi-tx-l39"/>
+                        <outlet property="naviBar" destination="Jcn-mb-ZxZ" id="kzy-wM-uNN"/>
+                        <outlet property="summaryView" destination="96H-Xc-VRy" id="Yl3-RJ-b04"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fP-GH-xum" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

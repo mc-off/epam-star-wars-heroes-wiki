@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, UISearchBarDelegate {
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
     var heroArray:[Hero] = []
     
@@ -17,15 +19,22 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         //searchView.configure(titleText: "Search")
-        let deffaultHero: Hero = Hero(name: "Baba", surname: "Vova", planet: "Sormovo")
+        let deffaultHero: Hero = Hero(name: "Baba Vova", planet: "Sormovo")
         
         for i in 0...20 {
-            heroArray.append(Hero(name: deffaultHero.name+String(i), surname:deffaultHero.surname+String(i), planet: deffaultHero.planet+String(i)))
+            heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i)))
         }
     
         registerTableViewCells()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        let titleView = UILabel(frame: CGRect(x:0, y:0, width: 40,height: 40))
+        titleView.contentMode = .scaleAspectFit
+        titleView.text = "Search"
+        navItem.titleView = titleView
     }
     
     private func registerTableViewCells (){
@@ -54,36 +63,39 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         return 60
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Search results"
+    }
+    
     
     //Создание кастомной ячейки таблицы
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell {
-            cell.cellLabel.text = heroArray[indexPath.row].name + heroArray[indexPath.row].surname
+            cell.cellLabel.text = heroArray[indexPath.row].name
+            cell.cellSubLabel.text = heroArray[indexPath.row].planet
             return cell
         }
         return UITableViewCell()
     }
     
     //Нажатие на ячейку таблицы переход к экрану детайльной информации
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        guard let StatViewController = storyboard.instantiateViewController(withIdentifier: "Stat") as? RequestController else {return}
-//
-//        self.tableView.cellForRow(at: indexPath)?.isSelected = false
-//
-//        if let cell = self.tableView.cellForRow(at: indexPath) as? CustomTableViewCell{
-//            guard let textName = cell.textLabelPerson.text else { return }
-//            StatViewController.sendData(parseRequest(namePerson: textName))
-//
-//            if checkDuplicateData(namePerson: textName){
-//                data.append(textName)
-//                searchBar.text = nil
-//                filteredData = data
-//                tableView.reloadData()
-//            }
-//        }
-//        navigationController?.pushViewController(StatViewController, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let heroViewController = storyboard.instantiateViewController(withIdentifier: "heroVC") as? HeroViewController else {return}
+
+        self.tableView.cellForRow(at: indexPath)?.isSelected = false
+
+        if let cell = self.tableView.cellForRow(at: indexPath) as? SearchTableViewCell{
+            guard let textName = cell.cellLabel.text else { return }
+            heroViewController.sendData(heroArray[indexPath.row])
+
+            if checkDuplicateData(namePerson: textName){
+                searchBar.text = ""
+                tableView.reloadData()
+            }
+        }
+        navigationController?.pushViewController(heroViewController, animated: true)
+    }
 
 
 }
