@@ -49,6 +49,7 @@ class HeroViewController: UIViewController, UITableViewDataSource,UITableViewDel
         }
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         let titleView = UILabel(frame: CGRect(x:0, y:0, width: 40,height: 40))
@@ -64,14 +65,6 @@ class HeroViewController: UIViewController, UITableViewDataSource,UITableViewDel
         
         
         private func checkDuplicateData(namePerson: String) ->Bool{
-    //        let result = data.filter({
-    //            $0 != namePerson
-    //        })
-    //        if result.count == data.count{
-    //            return true
-    //        } else{
-    //            return false
-    //        }
             return true
         }
         

@@ -79,12 +79,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-71.25" y="125.70422535211267"/>
+            <point key="canvasLocation" x="-67" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9aZ-5M-piY">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1q-pk-dod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="j5k-pZ-Peg" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4KQ-mn-up1">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -94,6 +93,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sMM-rV-4lO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1q-pk-dod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-978" y="127"/>
         </scene>
@@ -105,12 +105,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-Fq-VEr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="b6p-Fq-VEr">
                                 <rect key="frame" x="0.0" y="242" width="414" height="620"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Identif" textLabel="sMi-eJ-rFt" detailTextLabel="az8-1b-ZQE" style="IBUITableViewCellStyleValue1" id="5HN-3R-Dtg">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5HN-3R-Dtg" id="pRe-Zr-IL6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -161,7 +161,6 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="b6p-Fq-VEr" firstAttribute="bottom" secondItem="VbU-5C-vUL" secondAttribute="bottom" id="69y-Xe-3cK"/>
                             <constraint firstItem="dQl-tP-wrj" firstAttribute="leading" secondItem="VbU-5C-vUL" secondAttribute="leading" constant="40" id="6gf-8F-Bhp"/>
                             <constraint firstItem="8JS-mr-UaO" firstAttribute="leading" secondItem="MlU-xY-vus" secondAttribute="leading" id="7eX-Jx-iPf"/>
                             <constraint firstItem="8JS-mr-UaO" firstAttribute="top" secondItem="MlU-xY-vus" secondAttribute="bottom" constant="20" id="AVu-Kv-qqt"/>
@@ -171,6 +170,7 @@
                             <constraint firstItem="MlU-xY-vus" firstAttribute="leading" secondItem="dQl-tP-wrj" secondAttribute="trailing" constant="60" id="WdX-pO-pkG"/>
                             <constraint firstItem="b6p-Fq-VEr" firstAttribute="leading" secondItem="VbU-5C-vUL" secondAttribute="leading" id="aPH-cV-QmP"/>
                             <constraint firstItem="dQl-tP-wrj" firstAttribute="top" secondItem="VbU-5C-vUL" secondAttribute="top" constant="40" id="eBt-OU-wfG"/>
+                            <constraint firstItem="b6p-Fq-VEr" firstAttribute="bottom" secondItem="VbU-5C-vUL" secondAttribute="bottom" id="vwM-9Q-hgQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VbU-5C-vUL"/>
                     </view>

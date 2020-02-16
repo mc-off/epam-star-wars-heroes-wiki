@@ -49,6 +49,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D57982723F9E50500107829 /* Deffault */ = {
+			isa = PBXGroup;
+			children = (
+				6D9788A123F8090000514AAF /* AppDelegate.swift */,
+				6D9788A323F8090000514AAF /* SceneDelegate.swift */,
+				6D9788AA23F8090100514AAF /* Assets.xcassets */,
+				6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */,
+				6D9788AF23F8090100514AAF /* Info.plist */,
+			);
+			path = Deffault;
+			sourceTree = "<group>";
+		};
+		6D57982823F9E53300107829 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D9788A723F8090000514AAF /* Main.storyboard */,
+				6D57982A23F9E55D00107829 /* Info */,
+				6D57982923F9E54500107829 /* Search */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D57982923F9E54500107829 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */,
+				6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */,
+				6D9788A523F8090000514AAF /* ViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6D57982A23F9E55D00107829 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				6D57982123F934F600107829 /* HeroViewController.swift */,
+				6D57982323F9735400107829 /* InformationTableViewCell.swift */,
+				6D57982423F9735400107829 /* InformationTableViewCell.xib */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		6D57982B23F9E58C00107829 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6D57981F23F87F8500107829 /* Model.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		6D97889523F8090000514AAF = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +118,9 @@
 		6D9788A023F8090000514AAF /* epam-star-wars-heroes-wiki */ = {
 			isa = PBXGroup;
 			children = (
-				6D9788A123F8090000514AAF /* AppDelegate.swift */,
-				6D9788A323F8090000514AAF /* SceneDelegate.swift */,
-				6D9788A523F8090000514AAF /* ViewController.swift */,
-				6D57981F23F87F8500107829 /* Model.swift */,
-				6D9788A723F8090000514AAF /* Main.storyboard */,
-				6D57982123F934F600107829 /* HeroViewController.swift */,
-				6D9788AA23F8090100514AAF /* Assets.xcassets */,
-				6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */,
-				6D9788AF23F8090100514AAF /* Info.plist */,
-				6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */,
-				6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */,
-				6D57982323F9735400107829 /* InformationTableViewCell.swift */,
-				6D57982423F9735400107829 /* InformationTableViewCell.xib */,
+				6D57982B23F9E58C00107829 /* Data */,
+				6D57982823F9E53300107829 /* UI */,
+				6D57982723F9E50500107829 /* Deffault */,
 			);
 			path = "epam-star-wars-heroes-wiki";
 			sourceTree = "<group>";

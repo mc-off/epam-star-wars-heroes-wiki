@@ -18,10 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //searchView.configure(titleText: "Search")
         let deffaultHero: Hero = Hero(name: "Baba Vova", planet: "Sormovo")
         
-        for i in 0...20 {
+        for i in 0...30 {
             heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i),sex: getRandomSex()))
         }
     
@@ -44,14 +43,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     
     private func checkDuplicateData(namePerson: String) ->Bool{
-//        let result = data.filter({
-//            $0 != namePerson
-//        })
-//        if result.count == data.count{
-//            return true
-//        } else{
-//            return false
-//        }
         return true
     }
     
