@@ -54,9 +54,7 @@
 			children = (
 				6D9788A123F8090000514AAF /* AppDelegate.swift */,
 				6D9788A323F8090000514AAF /* SceneDelegate.swift */,
-				6D9788AA23F8090100514AAF /* Assets.xcassets */,
 				6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */,
-				6D9788AF23F8090100514AAF /* Info.plist */,
 			);
 			path = Deffault;
 			sourceTree = "<group>";
@@ -118,6 +116,8 @@
 		6D9788A023F8090000514AAF /* epam-star-wars-heroes-wiki */ = {
 			isa = PBXGroup;
 			children = (
+				6D9788AA23F8090100514AAF /* Assets.xcassets */,
+				6D9788AF23F8090100514AAF /* Info.plist */,
 				6D57982B23F9E58C00107829 /* Data */,
 				6D57982823F9E53300107829 /* UI */,
 				6D57982723F9E50500107829 /* Deffault */,
