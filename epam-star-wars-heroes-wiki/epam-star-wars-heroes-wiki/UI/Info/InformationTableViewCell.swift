@@ -15,25 +15,5 @@ class InformationTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
-    override func prepareForReuse() {
-        // invoke superclass implementation
-        super.prepareForReuse()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String!) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-    }
-    
+    override func setSelected(_ selected: Bool, animated: Bool) {}
 }

@@ -22,8 +22,8 @@ enum HeroSex: String{
 
 func getRandomSex() -> HeroSex {
     switch Int.random(in: 0 ... 2){
-        case 0: return .female
-        case 1: return .male
+    case 0: return .female
+    case 1: return .male
     default:
         return .undefined
     }
@@ -35,18 +35,18 @@ struct Hero {
     var sex:HeroSex = .undefined
     
     func getHeroVocabulary(withtDeffault:Bool) -> [HeroParameters: String] {
-            var heroVocabulary = [HeroParameters: String]()
-            if (withtDeffault){
-                if (!self.name.isEmpty){
-                    heroVocabulary.updateValue(self.name, forKey: .name)
-                }
-                if (!self.planet.isEmpty){
-                    heroVocabulary.updateValue(self.planet, forKey: .planet)
-                }
+        var heroVocabulary = [HeroParameters: String]()
+        if (withtDeffault){
+            if (!name.isEmpty){
+                heroVocabulary.updateValue(name, forKey: .name)
             }
-            if (!self.sex.rawValue.isEmpty){
-                heroVocabulary.updateValue(self.sex.rawValue, forKey: .sex)
+            if (!planet.isEmpty){
+                heroVocabulary.updateValue(planet, forKey: .planet)
             }
-            return heroVocabulary
         }
+        if (!sex.rawValue.isEmpty){
+            heroVocabulary.updateValue(sex.rawValue, forKey: .sex)
+        }
+        return heroVocabulary
     }
+}

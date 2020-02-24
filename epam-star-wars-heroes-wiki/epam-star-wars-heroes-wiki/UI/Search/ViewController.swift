@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var navItem: UINavigationItem!
@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         for i in 0...30 {
             heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i),sex: getRandomSex()))
         }
-    
+        
         registerTableViewCells()
         tableView.delegate = self
         tableView.dataSource = self
@@ -36,12 +36,13 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         navItem.titleView = titleView
     }
     
-    private func registerTableViewCells (){
+    private func registerTableViewCells () {
         let cell = UINib(nibName: "SearchTableViewCell", bundle: nil)
-        self.tableView.register(cell, forCellReuseIdentifier: "SearchTableViewCell")
+        tableView.register(cell, forCellReuseIdentifier: "SearchTableViewCell")
     }
-    
-    
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     private func checkDuplicateData(namePerson: String) ->Bool{
         return true
     }
@@ -59,7 +60,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
     
     
-    //Создание кастомной ячейки таблицы
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell {
             cell.cellLabel.text = heroArray[indexPath.row].name
@@ -69,17 +69,16 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         return UITableViewCell()
     }
     
-    //Нажатие на ячейку таблицы переход к экрану детайльной информации
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         guard let heroViewController = storyboard.instantiateViewController(withIdentifier: "heroVC") as? HeroViewController else {return}
-
+        
         self.tableView.cellForRow(at: indexPath)?.isSelected = false
-
+        
         if let cell = self.tableView.cellForRow(at: indexPath) as? SearchTableViewCell{
             guard let textName = cell.cellLabel.text else { return }
             heroViewController.sendData(heroArray[indexPath.row])
-
+            
             if checkDuplicateData(namePerson: textName){
                 searchBar.text = ""
                 tableView.reloadData()
@@ -87,7 +86,4 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         }
         navigationController?.pushViewController(heroViewController, animated: true)
     }
-
-
 }
-
