@@ -10,23 +10,18 @@ import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate {
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+    let searchController = UISearchController(searchResultsController: nil)
     var heroArray:[Hero] = []
+    var filteredHeroes: [Hero] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let deffaultHero: Hero = Hero(name: "Baba Vova", planet: "Sormovo")
-        
-        for i in 0...30 {
-            heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i),sex: getRandomSex()))
-        }
-        
-        registerTableViewCells()
-        tableView.delegate = self
-        tableView.dataSource = self
+        generateData()
+        registerTableView()
+        registerSearchController()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -36,19 +31,56 @@ class ViewController: UIViewController, UISearchBarDelegate {
         navItem.titleView = titleView
     }
     
-    private func registerTableViewCells () {
+    private func generateData() {
+        let deffaultHero: Hero = Hero(name: "Baba Vova", planet: "Sormovo")
+        
+        for i in 0...30 {
+            heroArray.append(Hero(name: deffaultHero.name+String(i),  planet: deffaultHero.planet+String(i),sex: getRandomSex()))
+        }
+    }
+    
+    private func registerTableView() {
+        registerTableViewCells()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    private func registerTableViewCells() {
         let cell = UINib(nibName: "SearchTableViewCell", bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: "SearchTableViewCell")
+    }
+    
+    private func registerSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Heroes"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+    
+    var isSearchBarEmpty: Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        
+      filteredHeroes = heroArray.filter { (hero: Hero) -> Bool in
+        return hero.name.lowercased().contains(searchText.lowercased())
+      }
+      tableView.reloadData()
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    var isFiltering: Bool {
+      return searchController.isActive && !isSearchBarEmpty
+    }
     private func checkDuplicateData(namePerson: String) ->Bool{
         return true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return heroArray.count
+        return isFiltering ? filteredHeroes.count: heroArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,8 +94,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as? SearchTableViewCell {
-            cell.cellLabel.text = heroArray[indexPath.row].name
-            cell.cellSubLabel.text = heroArray[indexPath.row].planet
+            let hero: Hero
+            
+            hero = isFiltering ? filteredHeroes[indexPath.row] : heroArray[indexPath.row]
+            
+            cell.cellLabel.text = hero.name
+            cell.cellSubLabel.text = hero.planet
             return cell
         }
         return UITableViewCell()
@@ -77,13 +113,21 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let cell = self.tableView.cellForRow(at: indexPath) as? SearchTableViewCell{
             guard let textName = cell.cellLabel.text else { return }
-            heroViewController.sendData(heroArray[indexPath.row])
+            
+            isFiltering ? heroViewController.sendData(filteredHeroes[indexPath.row]) : heroViewController.sendData(heroArray[indexPath.row])
             
             if checkDuplicateData(namePerson: textName){
-                searchBar.text = ""
+                searchController.searchBar.text = ""
                 tableView.reloadData()
             }
         }
         navigationController?.pushViewController(heroViewController, animated: true)
+    }
+}
+
+extension ViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    let searchBar = searchController.searchBar
+    filterContentForSearchText(searchBar.text ?? "")
     }
 }
