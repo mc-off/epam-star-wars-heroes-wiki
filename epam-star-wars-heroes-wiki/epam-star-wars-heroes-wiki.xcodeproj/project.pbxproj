@@ -1,0 +1,405 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D57981D23F87B7E00107829 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */; };
+		6D57981E23F87B7E00107829 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */; };
+		6D57982023F87F8500107829 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57981F23F87F8500107829 /* Model.swift */; };
+		6D57982223F934F600107829 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57982123F934F600107829 /* HeroViewController.swift */; };
+		6D57982523F9735500107829 /* InformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D57982323F9735400107829 /* InformationTableViewCell.swift */; };
+		6D57982623F9735500107829 /* InformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D57982423F9735400107829 /* InformationTableViewCell.xib */; };
+		6D9788A223F8090000514AAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A123F8090000514AAF /* AppDelegate.swift */; };
+		6D9788A423F8090000514AAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A323F8090000514AAF /* SceneDelegate.swift */; };
+		6D9788A623F8090000514AAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9788A523F8090000514AAF /* ViewController.swift */; };
+		6D9788A923F8090000514AAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9788A723F8090000514AAF /* Main.storyboard */; };
+		6D9788AB23F8090100514AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D9788AA23F8090100514AAF /* Assets.xcassets */; };
+		6D9788AE23F8090100514AAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		6D57981F23F87F8500107829 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		6D57982123F934F600107829 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		6D57982323F9735400107829 /* InformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTableViewCell.swift; sourceTree = "<group>"; };
+		6D57982423F9735400107829 /* InformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationTableViewCell.xib; sourceTree = "<group>"; };
+		6D97889E23F8090000514AAF /* epam-star-wars-heroes-wiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epam-star-wars-heroes-wiki.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9788A123F8090000514AAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6D9788A323F8090000514AAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6D9788A523F8090000514AAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D9788A823F8090000514AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6D9788AA23F8090100514AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D9788AD23F8090100514AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6D9788AF23F8090100514AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D97889B23F8090000514AAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D57982723F9E50500107829 /* Deffault */ = {
+			isa = PBXGroup;
+			children = (
+				6D9788A123F8090000514AAF /* AppDelegate.swift */,
+				6D9788A323F8090000514AAF /* SceneDelegate.swift */,
+				6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */,
+			);
+			path = Deffault;
+			sourceTree = "<group>";
+		};
+		6D57982823F9E53300107829 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6D9788A723F8090000514AAF /* Main.storyboard */,
+				6D57982A23F9E55D00107829 /* Info */,
+				6D57982923F9E54500107829 /* Search */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6D57982923F9E54500107829 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				6D57981B23F87B7E00107829 /* SearchTableViewCell.swift */,
+				6D57981C23F87B7E00107829 /* SearchTableViewCell.xib */,
+				6D9788A523F8090000514AAF /* ViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6D57982A23F9E55D00107829 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				6D57982123F934F600107829 /* HeroViewController.swift */,
+				6D57982323F9735400107829 /* InformationTableViewCell.swift */,
+				6D57982423F9735400107829 /* InformationTableViewCell.xib */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		6D57982B23F9E58C00107829 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6D57981F23F87F8500107829 /* Model.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6D97889523F8090000514AAF = {
+			isa = PBXGroup;
+			children = (
+				6D9788A023F8090000514AAF /* epam-star-wars-heroes-wiki */,
+				6D97889F23F8090000514AAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D97889F23F8090000514AAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D97889E23F8090000514AAF /* epam-star-wars-heroes-wiki.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D9788A023F8090000514AAF /* epam-star-wars-heroes-wiki */ = {
+			isa = PBXGroup;
+			children = (
+				6D9788AA23F8090100514AAF /* Assets.xcassets */,
+				6D9788AF23F8090100514AAF /* Info.plist */,
+				6D57982B23F9E58C00107829 /* Data */,
+				6D57982823F9E53300107829 /* UI */,
+				6D57982723F9E50500107829 /* Deffault */,
+			);
+			path = "epam-star-wars-heroes-wiki";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D97889D23F8090000514AAF /* epam-star-wars-heroes-wiki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D9788B223F8090100514AAF /* Build configuration list for PBXNativeTarget "epam-star-wars-heroes-wiki" */;
+			buildPhases = (
+				6D97889A23F8090000514AAF /* Sources */,
+				6D97889B23F8090000514AAF /* Frameworks */,
+				6D97889C23F8090000514AAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "epam-star-wars-heroes-wiki";
+			productName = "epam-star-wars-heroes-wiki";
+			productReference = 6D97889E23F8090000514AAF /* epam-star-wars-heroes-wiki.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D97889623F8090000514AAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Artem Makov";
+				TargetAttributes = {
+					6D97889D23F8090000514AAF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 6D97889923F8090000514AAF /* Build configuration list for PBXProject "epam-star-wars-heroes-wiki" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D97889523F8090000514AAF;
+			productRefGroup = 6D97889F23F8090000514AAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D97889D23F8090000514AAF /* epam-star-wars-heroes-wiki */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D97889C23F8090000514AAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D57982623F9735500107829 /* InformationTableViewCell.xib in Resources */,
+				6D9788AE23F8090100514AAF /* LaunchScreen.storyboard in Resources */,
+				6D9788AB23F8090100514AAF /* Assets.xcassets in Resources */,
+				6D9788A923F8090000514AAF /* Main.storyboard in Resources */,
+				6D57981E23F87B7E00107829 /* SearchTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D97889A23F8090000514AAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D9788A623F8090000514AAF /* ViewController.swift in Sources */,
+				6D9788A223F8090000514AAF /* AppDelegate.swift in Sources */,
+				6D57982023F87F8500107829 /* Model.swift in Sources */,
+				6D9788A423F8090000514AAF /* SceneDelegate.swift in Sources */,
+				6D57982223F934F600107829 /* HeroViewController.swift in Sources */,
+				6D57982523F9735500107829 /* InformationTableViewCell.swift in Sources */,
+				6D57981D23F87B7E00107829 /* SearchTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6D9788A723F8090000514AAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D9788A823F8090000514AAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6D9788AC23F8090100514AAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D9788AD23F8090100514AAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D9788B023F8090100514AAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D9788B123F8090100514AAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D9788B323F8090100514AAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epam-star-wars-heroes-wiki/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.mcoff.epam-star-wars-heroes-wiki";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D9788B423F8090100514AAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epam-star-wars-heroes-wiki/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.mcoff.epam-star-wars-heroes-wiki";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D97889923F8090000514AAF /* Build configuration list for PBXProject "epam-star-wars-heroes-wiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D9788B023F8090100514AAF /* Debug */,
+				6D9788B123F8090100514AAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D9788B223F8090100514AAF /* Build configuration list for PBXNativeTarget "epam-star-wars-heroes-wiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D9788B323F8090100514AAF /* Debug */,
+				6D9788B423F8090100514AAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D97889623F8090000514AAF /* Project object */;
+}
